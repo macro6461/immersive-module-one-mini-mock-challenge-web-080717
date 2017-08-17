@@ -1,12 +1,12 @@
-class Book
+class BookAuthor
 
-  attr_accessor :title, :author, :word_count
+  attr_accessor :book, :author, :word_count
 
   @@all = []
 
-  def initialize(title, author)
+  def initialize(book, author)
+    @book = book
     @author = author
-    @title = title
     @word_count = 1 + rand(100000)
     @@all << self
   end
